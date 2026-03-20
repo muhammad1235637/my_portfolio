@@ -1,6 +1,6 @@
 [
     {
-        "id": "0x01",
+        "id": "01",
         "category": "VIRTUALIZATION",
         "title": "KVM Management Dashboard",
         "desc": "Custom management interface for QEMU/KVM server environments.",
@@ -8,7 +8,7 @@
         "link": "#"
     },
     {
-        "id": "0x02",
+        "id": "02",
         "category": "SECURITY",
         "title": "CVE Scanner",
         "desc": "Automated vulnerability detection for local networks.",
