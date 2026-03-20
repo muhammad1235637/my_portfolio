@@ -103,183 +103,76 @@
 
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* Projects Layout */
-        .projects-wrapper {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 60px;
-            padding: 60px 5%;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .filter-sidebar {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .tag-list {
-            list-style: none;
-            padding: 20px 0;
-            font-family: monospace;
-            font-size: 0.8rem;
-        }
-
-        .tag-list li {
-            padding: 8px 0;
-            color: var(--text-dim);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .tag-list li:hover, .tag-list li.active {
-            color: var(--accent);
-        }
-
-        /* Project Entry Styling */
-        .projects-feed {
-            border-left: 1px solid var(--border);
-            padding-left: 40px;
-        }
-
-        .project-entry {
-            margin-bottom: 80px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .project-meta {
-            display: flex;
-            gap: 20px;
-            font-family: monospace;
-            font-size: 0.7rem;
-            margin-bottom: 15px;
-        }
-
-        .project-meta .id { color: var(--text-dim); }
-        .project-meta .tag { color: var(--accent); font-weight: bold; }
-
-        .project-entry h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .project-entry p {
-            color: var(--text-dim);
-            line-height: 1.8;
-            max-width: 800px;
-            margin-bottom: 25px;
-        }
-
-        .tech-used {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .tech-used span {
-            background: var(--panel);
-            border: 1px solid var(--border);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.75rem;
-            color: var(--text);
-        }
-
-        .project-links a {
-            font-family: monospace;
-            text-decoration: none;
-            color: var(--accent);
-            margin-right: 25px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .project-links a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 900px) {
-            .projects-wrapper { grid-template-columns: 1fr; }
-            .filter-sidebar { display: none; } /* Hide sidebar on mobile for simplicity */
-            .projects-feed { border-left: none; padding-left: 0; }
-        }
-
-        /* Infrastructure Styling */
-        .infra-container {
+        /* About Page Specifics */
+        .about-container {
             padding: 60px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .infra-grid {
+        .bio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
         }
 
-        .infra-card {
+        .bio-block {
             background: var(--panel);
+            padding: 40px;
             border: 1px solid var(--border);
-            padding: 30px;
+            position: relative;
+        }
+
+        .active-link { color: var(--accent) !important; }
+
+        .stats-row {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat { display: flex; flex-direction: column; }
+        .stat .val { font-size: 1.5rem; font-weight: 800; color: var(--accent); font-family: monospace; }
+        .stat .key { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; }
+
+        .stack-category { margin-bottom: 20px; }
+        .stack-category h4 { color: var(--accent); margin-bottom: 5px; font-size: 0.9rem; font-family: monospace; }
+        .stack-category p { font-size: 0.9rem; color: var(--text-dim); }
+
+        /* Experience Log */
+        .experience-log {
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+        }
+
+        .log-entry {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 2px solid var(--border);
             transition: 0.3s;
         }
 
-        .infra-card:hover { border-color: var(--accent); }
-
-        .card-icon { font-size: 1.5rem; margin-bottom: 15px; }
-
-        .spec-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
+        .log-entry:hover {
+            border-left-color: var(--accent);
+            background: rgba(0, 212, 255, 0.02);
         }
 
-        .spec-list li {
+        .timestamp {
             font-family: monospace;
-            font-size: 0.85rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .spec-list li span { color: var(--accent); font-weight: bold; }
-
-        /* Diagram Section */
-        .deployment-diagram {
-            margin-top: 80px;
-            padding: 40px;
-            background: #000;
-            border: 1px dashed var(--border);
-            text-align: center;
-        }
-
-        .diagram-placeholder {
-            font-family: monospace;
-            color: var(--text-dim);
-            margin-top: 30px;
-            line-height: 1.5;
-        }
-
-        .node, .node-main, .node-sub, .vm {
-            display: inline-block;
-            padding: 5px 15px;
-            border: 1px solid var(--accent);
+            font-size: 0.8rem;
             color: var(--accent);
-            margin: 5px;
+            white-space: nowrap;
         }
 
-        .cluster {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+        .log-content h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .log-content p { font-size: 0.9rem; color: var(--text-dim); }
+
+        @media (max-width: 768px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .log-entry { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
