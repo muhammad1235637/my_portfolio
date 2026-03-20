@@ -167,3 +167,109 @@ h1 {
     .bio-grid { grid-template-columns: 1fr; }
     .log-entry { flex-direction: column; gap: 10px; }
 }
+
+/* Projects Layout */
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    padding: 60px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.filter-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.tag-list {
+    list-style: none;
+    padding: 20px 0;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.tag-list li {
+    padding: 8px 0;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tag-list li:hover, .tag-list li.active {
+    color: var(--accent);
+}
+
+/* Project Entry Styling */
+.projects-feed {
+    border-left: 1px solid var(--border);
+    padding-left: 40px;
+}
+
+.project-entry {
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-meta {
+    display: flex;
+    gap: 20px;
+    font-family: monospace;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+}
+
+.project-meta .id { color: var(--text-dim); }
+.project-meta .tag { color: var(--accent); font-weight: bold; }
+
+.project-entry h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.project-entry p {
+    color: var(--text-dim);
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.tech-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tech-used span {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text);
+}
+
+.project-links a {
+    font-family: monospace;
+    text-decoration: none;
+    color: var(--accent);
+    margin-right: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .projects-wrapper { grid-template-columns: 1fr; }
+    .filter-sidebar { display: none; } /* Hide sidebar on mobile for simplicity */
+    .projects-feed { border-left: none; padding-left: 0; }
+}
