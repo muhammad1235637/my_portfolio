@@ -1,10 +1,10 @@
 [
     {
         "id": "CERT_01",
-        "title": "Ethical Hacking Essentials",
-        "issuer": "EC-Council / bitcyberbox",
+        "title": "Advent Of Cyber (AoC) 2025",
+        "issuer": "Tryhackme",
         "date": "2025-10",
-        "image": "/images/certs/ethical-hacking.jpg",
+        "image": "/images/certs/THM-7OJ0L1IEHC.pdf",
         "verify_link": "#"
     },
     {
