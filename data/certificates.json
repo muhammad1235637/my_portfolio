@@ -4,7 +4,7 @@
         "title": "Ethical Hacking Essentials",
         "issuer": "EC-Council / bitcyberbox",
         "date": "2025-10",
-        "image": "assets/certs/ethical-hacking.jpg",
+        "image": "/images/certs/ethical-hacking.jpg",
         "verify_link": "#"
     },
     {
@@ -12,7 +12,7 @@
         "title": "Full-Stack Web Development",
         "issuer": "Technical Forum",
         "date": "2025-08",
-        "image": "assets/certs/fullstack.jpg",
+        "image": "/images/certs/fullstack.jpg",
         "verify_link": "#"
     },
     {
@@ -20,7 +20,7 @@
         "title": "Network Security Specialist",
         "issuer": "Cisco / Academy",
         "date": "2026-01",
-        "image": "assets/certs/network-sec.jpg",
+        "image": "/images/certs/network-sec.jpg",
         "verify_link": "#"
     }
 ]
