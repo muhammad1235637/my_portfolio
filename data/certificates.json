@@ -1,0 +1,26 @@
+[
+    {
+        "id": "CERT_01",
+        "title": "Ethical Hacking Essentials",
+        "issuer": "EC-Council / bitcyberbox",
+        "date": "2025-10",
+        "image": "assets/certs/ethical-hacking.jpg",
+        "verify_link": "#"
+    },
+    {
+        "id": "CERT_02",
+        "title": "Full-Stack Web Development",
+        "issuer": "Technical Forum",
+        "date": "2025-08",
+        "image": "assets/certs/fullstack.jpg",
+        "verify_link": "#"
+    },
+    {
+        "id": "CERT_03",
+        "title": "Network Security Specialist",
+        "issuer": "Cisco / Academy",
+        "date": "2026-01",
+        "image": "assets/certs/network-sec.jpg",
+        "verify_link": "#"
+    }
+]

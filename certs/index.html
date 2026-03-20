@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications // Credential_Vault</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        .cert-container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .cert-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .cert-image {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .cert-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover .cert-image img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .cert-info {
+            padding: 25px;
+        }
+
+        .cert-date {
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+        }
+
+        .cert-info h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .issuer {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .verify-btn {
+            font-family: monospace;
+            font-size: 0.75rem;
+            text-decoration: none;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        .verify-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">CORE_DEVS</a><span class="cursor">_</span></div>
+        <div class="nav-links">
+            <a href="index.html">/root</a>
+            <a href="about.html">/about</a>
+            <a href="projects.html">/projects</a>
+            <a href="certificates.html" class="active-link">/certificates</a>
+        </div>
+    </header>
+
+    <main class="cert-container">
+        <section class="cert-header">
+            <span class="label">VERIFIED_CREDENTIALS</span>
+            <h1>Technical Certifications</h1>
+            <p>A repository of earned certifications in Full-Stack Development, Cybersecurity, and IT Infrastructure.</p>
+        </section>
+
+        <div class="cert-grid" id="cert-gallery"></div>
+    </main>
+
+    <footer class="system-footer">
+        <div class="status-box">
+            <div class="dot green"></div>
+            <span>VAULT_SECURE</span>
+        </div>
+        <div class="copy">BUILT WITH PRECISION // 2026</div>
+    </footer>
+
+    <script src="certificates.js"></script>
+</body>
+</html>
