@@ -11,7 +11,7 @@
         "id": "02",
         "category": "Virtualization",
         "title": "KVM Management Dashboard",
-        "desc": "Created custom tools for QEMU/KVM server environments.",
+        "desc": "Created custom tools for QEMU/KVM virtual server environments.",
         "tech": ["Python", "Libvirt"],
         "link": "#"
     },
@@ -19,7 +19,7 @@
         "id": "03",
         "category": "Virtualization",
         "title": "Web Terminal",
-        "desc": "Created web terminal to access Virtual Machines.",
+        "desc": "Created web terminal to access Virtual Machines using the browser without the need to download anything.",
         "tech": ["Guacamole"],
         "link": "https://guacd.bitcyberbox.com/"
     }
