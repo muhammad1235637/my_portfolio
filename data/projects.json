@@ -1,18 +1,26 @@
 [
     {
         "id": "01",
-        "category": "VIRTUALIZATION",
-        "title": "KVM Management Dashboard",
-        "desc": "Custom management interface for QEMU/KVM server environments.",
-        "tech": ["Python", "Libvirt"],
-        "link": "#"
+        "category": "Web Development & Administration",
+        "title": "Founder & Admin of bitcyberbox.com",
+        "desc": "Independently developed bitcyberbox.com, and maintaining it till today while further developing the site. ",
+        "tech": ["PHP", "HTML CSS JS", "PYTHON", "SHELL"],
+        "link": "https://www.bitcyberbox.com/"
     },
     {
         "id": "02",
-        "category": "SECURITY",
-        "title": "CVE Scanner",
-        "desc": "Automated vulnerability detection for local networks.",
-        "tech": ["Python", "Scapy"],
+        "category": "Virtualization",
+        "title": "KVM Management Dashboard",
+        "desc": "Created custom tools for QEMU/KVM server environments.",
+        "tech": ["Python", "Libvirt"],
         "link": "#"
+    },
+        {
+        "id": "03",
+        "category": "Virtualization",
+        "title": "Web Terminal",
+        "desc": "Created web terminal to access Virtual Machines.",
+        "tech": ["Guacamole"],
+        "link": "https://guacd.bitcyberbox.com/"
     }
 ]
