@@ -1,0 +1,18 @@
+[
+    {
+        "id": "0x01",
+        "category": "VIRTUALIZATION",
+        "title": "KVM Management Dashboard",
+        "desc": "Custom management interface for QEMU/KVM server environments.",
+        "tech": ["Python", "Libvirt"],
+        "link": "#"
+    },
+    {
+        "id": "0x02",
+        "category": "SECURITY",
+        "title": "CVE Scanner",
+        "desc": "Automated vulnerability detection for local networks.",
+        "tech": ["Python", "Scapy"],
+        "link": "#"
+    }
+]
