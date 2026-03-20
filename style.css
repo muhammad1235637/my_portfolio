@@ -1,0 +1,97 @@
+:root {
+    --bg: #0a0a0c;
+    --panel: #111114;
+    --accent: #00d4ff; /* Tech Blue */
+    --text: #e0e0e0;
+    --text-dim: #666;
+    --border: #222;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 5%;
+    border-bottom: 1px solid var(--border);
+    font-family: monospace;
+}
+
+.brand { font-weight: bold; font-size: 1.2rem; }
+.cursor { color: var(--accent); animation: blink 1s infinite; }
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.hero-block {
+    padding: 100px 5%;
+    max-width: 1200px;
+}
+
+.label {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 20px 0;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-top: 1px solid var(--border);
+}
+
+.grid-item {
+    background: var(--bg);
+    padding: 40px;
+    transition: background 0.3s;
+}
+
+.grid-item:hover { background: var(--panel); }
+
+.grid-item .header {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 30px;
+}
+
+.grid-item h3 { color: var(--accent); margin: 0 0 15px 0; }
+
+.system-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5%;
+    border-top: 1px solid var(--border);
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.status-box { display: flex; align-items: center; }
+.dot { height: 6px; width: 6px; border-radius: 50%; margin-right: 10px; }
+.green { background: #00ff66; box-shadow: 0 0 10px #00ff66; }
+
+@keyframes blink { 50% { opacity: 0; } }
