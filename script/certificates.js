@@ -22,7 +22,7 @@ async function convertPdfToPng(pdfUrl) {
         return canvas.toDataURL('image/png');
     } catch (error) {
         console.error("PDF Conversion Error:", error);
-        return 'assets/placeholder.png'; // Fallback if conversion fails
+        return 'images/placeholder.png'; // Fallback if conversion fails
     }
 }
 
