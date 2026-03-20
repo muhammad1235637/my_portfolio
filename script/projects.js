@@ -3,7 +3,7 @@ let allProjects = [];
 
 async function initProjects() {
     try {
-        const response = await fetch('projects.json');
+        const response = await fetch('/data/projects.json');
         allProjects = await response.json();
         renderProjects(allProjects); // Initial render
         setupFilters();
