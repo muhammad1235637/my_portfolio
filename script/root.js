@@ -1,7 +1,7 @@
 async function loadProjects() {
     const response = await fetch('/data/projects.json');
     const projects = await response.json();
-    const container = document.querySelector('.projects-feed');
+    const container = document.querySelector('.project-grid');
     
     container.innerHTML = projects.map(project => `
         <div class="grid-item">
