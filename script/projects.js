@@ -27,9 +27,9 @@ function renderProjects(data) {
             <div class="tech-used">
                 ${project.tech.map(t => `<span>${t}</span>`).join('')}
             </div>
-            <div class="project-links">
+            <!--<div class="project-links">
                 <a href="${project.link}" target="_blank">[VIEW_SOURCE]</a>
-            </div>
+            </div>-->
         </div>
     `).join('');
 }
