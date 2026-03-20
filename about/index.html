@@ -4,7 +4,284 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Muhammad's Portfolio</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --panel: #111114;
+            --accent: #00d4ff; /* Tech Blue */
+            --text: #e0e0e0;
+            --text-dim: #666;
+            --border: #222;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 5%;
+            border-bottom: 1px solid var(--border);
+            font-family: monospace;
+        }
+
+        .brand { font-weight: bold; font-size: 1.2rem; }
+        .cursor { color: var(--accent); animation: blink 1s infinite; }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .hero-block {
+            padding: 100px 5%;
+            max-width: 1200px;
+        }
+
+        .label {
+            color: var(--accent);
+            font-family: monospace;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin: 20px 0;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border-top: 1px solid var(--border);
+        }
+
+        .grid-item {
+            background: var(--bg);
+            padding: 40px;
+            transition: background 0.3s;
+        }
+
+        .grid-item:hover { background: var(--panel); }
+
+        .grid-item .header {
+            display: flex;
+            justify-content: space-between;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .grid-item h3 { color: var(--accent); margin: 0 0 15px 0; }
+
+        .system-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 5%;
+            border-top: 1px solid var(--border);
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+        }
+
+        .status-box { display: flex; align-items: center; }
+        .dot { height: 6px; width: 6px; border-radius: 50%; margin-right: 10px; }
+        .green { background: #00ff66; box-shadow: 0 0 10px #00ff66; }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* Projects Layout */
+        .projects-wrapper {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            padding: 60px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .filter-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .tag-list {
+            list-style: none;
+            padding: 20px 0;
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+
+        .tag-list li {
+            padding: 8px 0;
+            color: var(--text-dim);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .tag-list li:hover, .tag-list li.active {
+            color: var(--accent);
+        }
+
+        /* Project Entry Styling */
+        .projects-feed {
+            border-left: 1px solid var(--border);
+            padding-left: 40px;
+        }
+
+        .project-entry {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            font-family: monospace;
+            font-size: 0.7rem;
+            margin-bottom: 15px;
+        }
+
+        .project-meta .id { color: var(--text-dim); }
+        .project-meta .tag { color: var(--accent); font-weight: bold; }
+
+        .project-entry h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .project-entry p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 800px;
+            margin-bottom: 25px;
+        }
+
+        .tech-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tech-used span {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--text);
+        }
+
+        .project-links a {
+            font-family: monospace;
+            text-decoration: none;
+            color: var(--accent);
+            margin-right: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .projects-wrapper { grid-template-columns: 1fr; }
+            .filter-sidebar { display: none; } /* Hide sidebar on mobile for simplicity */
+            .projects-feed { border-left: none; padding-left: 0; }
+        }
+
+        /* Infrastructure Styling */
+        .infra-container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .infra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .infra-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .infra-card:hover { border-color: var(--accent); }
+
+        .card-icon { font-size: 1.5rem; margin-bottom: 15px; }
+
+        .spec-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .spec-list li {
+            font-family: monospace;
+            font-size: 0.85rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-list li span { color: var(--accent); font-weight: bold; }
+
+        /* Diagram Section */
+        .deployment-diagram {
+            margin-top: 80px;
+            padding: 40px;
+            background: #000;
+            border: 1px dashed var(--border);
+            text-align: center;
+        }
+
+        .diagram-placeholder {
+            font-family: monospace;
+            color: var(--text-dim);
+            margin-top: 30px;
+            line-height: 1.5;
+        }
+
+        .node, .node-main, .node-sub, .vm {
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            margin: 5px;
+        }
+
+        .cluster {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
 
