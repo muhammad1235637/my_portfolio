@@ -15,7 +15,7 @@ async function loadProjects() {
                 ${project.tech.map(t => `<span>${t}</span>`).join('')}
             </div>
             <div class="project-links">
-                <a href="${project.link}">[VIEW_SOURCE]</a>
+                <!--<a href="${project.link}">[VIEW_SOURCE]</a>-->
             </div>
         </div>
     `).join('');
