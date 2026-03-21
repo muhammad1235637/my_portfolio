@@ -53,7 +53,7 @@ async function loadCertificates() {
                         <span class="cert-date">${cert.date}</span>
                         <h3>${cert.title}</h3>
                         <p class="issuer">${cert.issuer}</p>
-                        <a href="${cert.image}" class="verify-btn" target="_blank">[VIEW_ORIGINAL_PDF]</a>
+                        <a href="${cert.image}" class="verify-btn" target="_blank">[VIEW_ORIGINAL_FILE]</a>
                     </div>
                 </div>
             `;
