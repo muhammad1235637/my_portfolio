@@ -17,10 +17,10 @@
     },
     {
         "id": "CERT_03",
-        "title": "Network Security Specialist",
-        "issuer": "Cisco / Academy",
+        "title": "Certified in Cyber security (CC) {just the course}",
+        "issuer": "ISC2",
         "date": "2026-01",
-        "image": "/images/certs/network-sec.jpg",
+        "image": "/images/certs/bdade30b-6f3f-4e59-ab55-24386b53aefa.pdf",
         "verify_link": "#"
     }
 ]
