@@ -10,7 +10,7 @@
     {
         "id": "CERT_02",
         "title": "Advent Of Cyber (AoC) 2024",
-        "issuer": "Technical Forum",
+        "issuer": "Tryhackme",
         "date": "2025-08",
         "image": "/images/certs/THM-VKPHV9QQCI.pdf",
         "verify_link": "#"
