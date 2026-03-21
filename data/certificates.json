@@ -26,7 +26,7 @@
     {
         "id": "CERT_04",
         "title": "Front end HTML Development",
-        "issuer": "ISC2",
+        "issuer": "Great Learning Academy",
         "date": "2026-01",
         "image": "/images/certs/Front_end_dev_HTML.png",
         "verify_link": "#"
@@ -34,15 +34,15 @@
     {
         "id": "CERT_05",
         "title": "Introduction to Cyber Security",
-        "issuer": "ISC2",
+        "issuer": "Great Learning Academy",
         "date": "2026-01",
         "image": "/images/certs/intro_to_cyber_security.png",
         "verify_link": "#"
     },
     {
         "id": "CERT_06",
-        "title": "Linux - Great Learning Academy",
-        "issuer": "ISC2",
+        "title": "Linux",
+        "issuer": "Great Learning Academy",
         "date": "2026-01",
         "image": "/images/certs/Linux_tutorial.png",
         "verify_link": "#"
