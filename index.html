@@ -5,6 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad's Portfolio</title>
     <link rel="stylesheet" href="/style/style.css">
+    <style>
+        .contact-cta {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f9fbfb;
+            border: 1px solid var(--cv-bg);
+            border-radius: 4px;
+        }
+
+        .contact-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .label {
+            display: block;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: var(--cv-muted);
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .email-link {
+            font-size: 1.1rem;
+            color: var(--cv-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .email-link:hover {
+            color: var(--cv-accent);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--cv-dark);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            font-family: monospace;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: var(--cv-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .download-btn .icon {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .contact-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .download-box {
+                margin-top: 20px;
+                width: 100%;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -29,11 +108,22 @@
         <script src="/script/root.js"></script>
     </section>
 
-    <section>
-        <h3>CONTACT ME</h3>
-        <span>Here's my email : admin@bitcyberbox.com</span>
-        <a href="CV.docx">Download CV</a>
-    </section>
+<section class="cv-section contact-cta">
+    <h2>GET IN TOUCH</h2>
+    <div class="contact-card">
+        <div class="contact-info">
+            <span class="label">PRIMARY_EMAIL</span>
+            <a href="mailto:admin@bitcyberbox.com" class="email-link">admin@bitcyberbox.com</a>
+        </div>
+        
+        <div class="download-box">
+            <span class="label">RESUME_FILES</span>
+            <a href="CV.docx" class="download-btn" download>
+                <span class="icon">📄</span> DOWNLOAD_CV.DOCX
+            </a>
+        </div>
+    </div>
+</section>
     <footer class="system-footer">
         <div class="status-box">
             <div class="dot green"></div>
