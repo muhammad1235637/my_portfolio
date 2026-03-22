@@ -113,9 +113,9 @@
         async function fetchCVData() {
             try {
                 const [aboutRes, projectsRes, certsRes] = await Promise.all([
-                    fetch('about.json'),
-                    fetch('projects.json'),
-                    fetch('certificates.json')
+                    fetch('/data/about.json'),
+                    fetch('/data/projects.json'),
+                    fetch('/data/certificates.json')
                 ]);
 
                 const about = await aboutRes.json();
