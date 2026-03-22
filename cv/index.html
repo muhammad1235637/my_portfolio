@@ -1,110 +1,182 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Muhammad's Portfolio</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <title>Curriculum Vitae - Muhammad's Portfolio</title>
     <style>
-        /* CV Specific Print-Friendly & High-Density Styles */
-        .cv-master-wrapper {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: var(--panel);
-            border: 1px solid var(--border);
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 5px; }
+        
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        section { margin-bottom: 35px; }
+        
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .item { margin-bottom: 20px; }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .meta { color: #666; font-size: 0.9rem; font-style: italic; margin-bottom: 8px; display: block; }
+        
+        ul { padding-left: 20px; margin-top: 5px; }
+        li { margin-bottom: 5px; }
+
+        .skills-grid {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
         }
 
-        .cv-sidebar {
-            background: #0d0d10;
-            padding: 40px 30px;
-            border-right: 1px solid var(--border);
-        }
-
-        .cv-main { padding: 50px; }
-
-        .cv-section { margin-bottom: 40px; }
-        .cv-section h2 {
-            font-family: monospace;
-            color: var(--accent);
-            font-size: 1rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .cv-item { margin-bottom: 25px; }
-        .cv-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; }
-        .cv-item .meta { 
-            font-family: monospace; 
-            font-size: 0.8rem; 
-            color: var(--text-dim); 
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .tag-pill {
-            display: inline-block;
-            padding: 2px 8px;
-            background: var(--border);
-            border-radius: 3px;
-            font-size: 0.7rem;
-            margin-right: 5px;
-        }
+        .skill-cat { font-weight: bold; margin-right: 10px; }
 
         @media print {
-            .cv-nav, .system-footer { display: none; }
-            body { background: white; color: black; }
-            .cv-master-wrapper { border: none; margin: 0; width: 100%; }
+            body { padding: 0; }
+            .cv-container { max-width: 100%; }
         }
-
-        .active-link { color: var(--accent) !important; }
     </style>
 </head>
 <body>
 
-    <nav class="top-nav">
-        <div class="brand"><a href="/" style="text-decoration:none; color:inherit;">MUHAMMAD</a><span class="cursor">'S</span> PORTFOLIO</div>
-        <div class="nav-links">
-            <a href="/about/">/about</a>
-            <a href="/projects">/projects</a>
-            <a href="/certs/">/certs</a>
-        </div>
-    </nav>
+    <div class="cv-container">
+        <header>
+            <h1 id="cv-name">MUHAMMAD</h1>
+            <div class="subtitle" id="cv-title">Full-Stack Developer & Security Researcher</div>
+            <div class="contact-info" id="cv-contact">
+                </div>
+        </header>
 
-    <div class="cv-master-wrapper">
-        <aside class="cv-sidebar" id="cv-sidebar-js">
-            <div class="profile-section">
-                <h1 id="cv-name">Loading...</h1>
-                <p id="cv-title" class="label" style="margin-top:10px"></p>
-            </div>
-            <div id="cv-contact-js"></div>
-            <div id="cv-skills-js"></div>
-        </aside>
+        <section>
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p id="cv-bio">Loading profile...</p>
+        </section>
 
-        <main class="cv-main">
-            <section class="cv-section">
-                <h2>01_SUMMARY</h2>
-                <p id="cv-bio">Initializing data streams...</p>
+        <section id="cv-skills">
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-grid" id="skills-list">
+                </div>
+        </section>
+
+        <section id="cv-experience">
+            <h2>EXPERIENCE</h2>
             </section>
 
-            <section class="cv-section" id="cv-experience-js">
-                <h2>02_EXPERIENCE_LOG</h2>
-                </section>
+        <section id="cv-projects">
+            <h2>KEY PROJECTS</h2>
+            </section>
 
-            <section class="cv-section" id="cv-projects-js">
-                <h2>03_TECHNICAL_PROJECTS</h2>
-                </section>
-
-            <section class="cv-section" id="cv-certs-js">
-                <h2>04_VERIFIED_CREDENTIALS</h2>
-                </section>
-        </main>
+        <section id="cv-certs">
+            <h2>CERTIFICATIONS</h2>
+            <ul id="certs-list">
+                </ul>
+        </section>
     </div>
 
-    <script src="/script/cv-engine.js"></script>
+    <script>
+        async function fetchCVData() {
+            try {
+                const [aboutRes, projectsRes, certsRes] = await Promise.all([
+                    fetch('about.json'),
+                    fetch('projects.json'),
+                    fetch('certificates.json')
+                ]);
+
+                const about = await aboutRes.json();
+                const projects = await projectsRes.json();
+                const certs = await certsRes.json();
+
+                // 1. Header & Bio
+                document.getElementById('cv-title').textContent = about.identity.title.replace('<br>', ' ');
+                document.getElementById('cv-bio').textContent = about.identity.bio.replace(/\*\*/g, '');
+                document.getElementById('cv-contact').innerHTML = `
+                    <span>📍 ${about.identity.location}</span>
+                    <span>📧 ${about.identity.email}</span>
+                    <span>🔗 bitcyberbox.com</span>
+                `;
+
+                // 2. Skills
+                const skillsList = document.getElementById('skills-list');
+                about.skills.forEach(s => {
+                    skillsList.innerHTML += `<div><span class="skill-cat">${s.category}:</span> ${s.items}</div>`;
+                });
+
+                // 3. Experience
+                const expTarget = document.getElementById('cv-experience');
+                about.experience.forEach(exp => {
+                    expTarget.innerHTML += `
+                        <div class="item">
+                            <div class="item-header">
+                                <span>${exp.title}</span>
+                                <span>${exp.time}</span>
+                            </div>
+                            <ul>${exp.description.split('. ').map(d => `<li>${d}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                });
+
+                // 4. Projects
+                const projTarget = document.getElementById('cv-projects');
+                projects.forEach(p => {
+                    projTarget.innerHTML += `
+                        <div class="item">
+                            <div class="item-header">
+                                <span>${p.title}</span>
+                                <span>${p.tech.join(', ')}</span>
+                            </div>
+                            <p style="margin: 5px 0 0 0; font-size: 0.95rem;">${p.desc}</p>
+                        </div>
+                    `;
+                });
+
+                // 5. Certifications
+                const certTarget = document.getElementById('certs-list');
+                certs.forEach(c => {
+                    certTarget.innerHTML += `<li><strong>${c.title}</strong> — ${c.issuer} (${c.date})</li>`;
+                });
+
+            } catch (err) {
+                console.error("Error compiling CV:", err);
+            }
+        }
+
+        window.onload = fetchCVData;
+    </script>
 </body>
 </html>
