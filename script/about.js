@@ -1,54 +1,46 @@
-async function loadAboutData() {
+async function loadAbout() {
     try {
         const response = await fetch('/data/about.json');
         const data = await response.json();
 
-        // 1. Populate Identity (Sidebar & Header)
-        document.querySelector('.profile-section h1').textContent = data.identity.name;
-        document.querySelector('.subtitle').textContent = data.identity.title;
-        document.querySelector('.cv-section p').textContent = data.identity.bio;
+        // Load Identity
+        document.getElementById('id-title').innerHTML = data.identity.title;
+        document.getElementById('id-bio').innerHTML = data.identity.bio.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        const statsRow = document.getElementById('stats-row');
+        statsRow.innerHTML = data.identity.stats.map(s => `
+            <div class="stat">
+                <span class="val">${s.val}</span>
+                <span class="key">${s.key}</span>
+            </div>
+        `).join('');
 
-        // 2. Populate Skills (Sidebar Blocks)
-        const sidebar = document.querySelector('.cv-sidebar');
-        // Clear existing skill blocks if any
-        const existingBlocks = sidebar.querySelectorAll('.sidebar-block.dynamic-skill');
-        existingBlocks.forEach(b => b.remove());
+        // Load Skills
+        const stackTarget = document.getElementById('stack-target');
+        stackTarget.innerHTML = '<span class="label">SKILL_MANIFEST</span>' + 
+            data.skills.map(s => `
+            <div class="stack-category">
+                <h4>${s.category}</h4>
+                <p>${s.items}</p>
+            </div>
+        `).join('');
 
-        data.skills.forEach(skillGroup => {
-            const block = document.createElement('div');
-            block.className = 'sidebar-block dynamic-skill';
-            block.innerHTML = `
-                <h3>${skillGroup.category}</h3>
-                <ul class="skill-list">
-                    ${skillGroup.items.map(item => `<li>${item}</li>`).join('')}
-                </ul>
-            `;
-            sidebar.appendChild(block);
-        });
-
-        // 3. Populate Experience (Main Content)
-        const experienceContainer = document.querySelector('.cv-section.experience-list');
-        experienceContainer.innerHTML = '<h2>PROFESSIONAL EXPERIENCE</h2>'; // Reset header
-
-        data.experience.forEach(job => {
-            const item = document.createElement('div');
-            item.className = 'cv-item';
-            item.innerHTML = `
-                <div class="item-header">
-                    <span class="title">${job.role}</span>
-                    <span class="date">${job.period}</span>
+        // Load Experience
+        const logTarget = document.getElementById('log-target');
+        logTarget.innerHTML = '<span class="label">SYSTEM_LOGS</span>' + 
+            data.experience.map(e => `
+            <div class="log-entry">
+                <span class="timestamp">${e.time}</span>
+                <div class="log-content">
+                    <h3>${e.title}</h3>
+                    <p>${e.description}</p>
                 </div>
-                <p class="org">${job.org}</p>
-                <ul>
-                    ${job.details.map(detail => `<li>${detail}</li>`).join('')}
-                </ul>
-            `;
-            experienceContainer.appendChild(item);
-        });
+            </div>
+        `).join('');
 
-    } catch (error) {
-        console.error("Critical System Error: Unable to load Identity Manifest.", error);
+    } catch (err) {
+        console.error("System Error: Could not sync identity nodes.", err);
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadAboutData);
+document.addEventListener('DOMContentLoaded', loadAbout);

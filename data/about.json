@@ -1,35 +1,36 @@
 {
     "identity": {
-        "name": "Muhammad",
-        "title": "Full-Stack Developer & Security Researcher",
-        "bio": "A self-taught engineer focused on building secure, high-performance web applications and virtualization layers. Experienced in infrastructure hardening, CVE scanning, and full-stack deployment.",
-        "location": "Al Jubail, Saudi Arabia",
-        "email": "admin@bitcyberbox.com"
+        "title": "Full-Stack Developer <br> & Cybersecurity Enthusiast",
+        "bio": "A self-taught engineer focused on the intersection of **Web Development** and **Cybersecurity**. I build systems that are not just functional, but hardened against modern threats.",
+        "stats": [
+            { "val": "5+", "key": "Languages" },
+            { "val": "08/5", "key": "Uptime" }
+        ]
     },
     "skills": [
-        { "category": "CORE STACK", "items": ["Python", "PHP", "HTML5/CSS3", "JavaScript", "SQL"] },
-        { "category": "INFRASTRUCTURE", "items": ["KVM/QEMU", "Libvirt", "Linux Server Admin", "Xeon Hardware"] },
-        { "category": "SECURITY", "items": ["Penetration Testing", "DNS Spoofing", "Network Hardening"] }
+        {
+            "category": "Development",
+            "items": "Python, JavaScript, PHP, HTML/CSS, Shell Scripting"
+        },
+        {
+            "category": "Infrastructure",
+            "items": "KVM, QEMU, Libvirt, Linux Server Management"
+        },
+        {
+            "category": "Security",
+            "items": "Penetration Testing, DNS Spoofing, Network Hardening"
+        }
     ],
     "experience": [
         {
-            "role": "Lead Administrator",
-            "org": "bitcyberbox.com",
-            "period": "2025 - PRESENT",
-            "details": [
-                "Architected a secure IT training platform from the ground up.",
-                "Implemented custom PHP/MySQL backend for user certification.",
-                "Managed on-premise server security and network optimization."
-            ]
+            "time": "[2025.08 - PRESENT]",
+            "title": "Lead Administrator @ bitcyberbox.com",
+            "description": "Architected and deployed an online IT training platform. Managed server infrastructure, security protocols, and custom UI components."
         },
         {
-            "role": "Systems Architect",
-            "org": "Independent Projects",
-            "period": "2026.01 - 2026.02",
-            "details": [
-                "Developed Python-based dashboards for managing server-grade Xeon hardware.",
-                "Configured complex virtualized environments using KVM and Libvirt."
-            ]
+            "time": "[2026.01 - 2026.02]",
+            "title": "Virtualization Enthusiast",
+            "description": "Developed custom Python-based tools for managing hardware and KVM environments."
         }
     ]
 }

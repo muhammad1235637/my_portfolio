@@ -181,27 +181,30 @@
     <header class="top-nav">
         <div class="brand"><a href="/" style="text-decoration:none; color:inherit;">MUHAMMAD</a><span class="cursor">'S</span> PORTFOLIO</div>
         <div class="nav-links">
-            <a href="/about" class="active-link">/about</a>
-            <a href="/projects">/projects</a>
-            <a href="/certs">/certificates</a>
+            <a href="about.html" class="active-link">/about</a>
+            <a href="projects.html">/projects</a>
+            <a href="certificates.html">/certificates</a>
         </div>
     </header>
 
-<main class="cv-content">
-    <section class="cv-section">
-        <h2>SUMMARY</h2>
-        <p></p>
-    </section>
+    <main class="about-container">
+        <section class="bio-grid">
+            <div class="bio-block identity">
+                <span class="label">IDENTITY_CORE</span>
+                <h2 id="id-title">Loading...</h2>
+                <p id="id-bio">Initializing biometric data...</p>
+                
+                <div class="stats-row" id="stats-row">
+                    </div>
+            </div>
 
-    <section class="cv-section experience-list">
+            <div class="bio-block tech-stack" id="stack-target">
+                </div>
         </section>
-    
-    <section class="cv-section contact-cta">
-        ...
-    </section>
-</main>
 
-<script src="about.js"></script>
+        <section class="experience-log" id="log-target">
+            </section>
+    </main>
 
     <footer class="system-footer">
         <div class="status-box">
@@ -211,5 +214,6 @@
         <div class="copy">POWERED BY BITCYBERBOX // 2026</div>
     </footer>
 
+    <script src="/script/about.js"></script>
 </body>
 </html>
