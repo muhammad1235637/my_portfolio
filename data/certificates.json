@@ -3,7 +3,7 @@
         "id": "CERT_01",
         "title": "Advent Of Cyber (AoC) 2025",
         "issuer": "Tryhackme",
-        "date": "2025-10",
+        "date": "2025-12",
         "image": "/images/certs/THM-7OJ0L1IEHC.pdf",
         "verify_link": "#"
     },
@@ -11,7 +11,7 @@
         "id": "CERT_02",
         "title": "Advent Of Cyber (AoC) 2024",
         "issuer": "Tryhackme",
-        "date": "2025-08",
+        "date": "2024-01",
         "image": "/images/certs/THM-VKPHV9QQCI.pdf",
         "verify_link": "#"
     },
@@ -19,7 +19,7 @@
         "id": "CERT_03",
         "title": "Certified in Cyber security (CC) {just the course}",
         "issuer": "ISC2",
-        "date": "2026-01",
+        "date": "2024-12",
         "image": "/images/certs/bdade30b-6f3f-4e59-ab55-24386b53aefa.pdf",
         "verify_link": "#"
     },
@@ -27,7 +27,7 @@
         "id": "CERT_04",
         "title": "Front end HTML Development",
         "issuer": "Great Learning Academy",
-        "date": "2026-01",
+        "date": "2023-10",
         "image": "/images/certs/Front_end_dev_HTML.png",
         "verify_link": "#"
     },
@@ -35,7 +35,7 @@
         "id": "CERT_05",
         "title": "Introduction to Cyber Security",
         "issuer": "Great Learning Academy",
-        "date": "2026-01",
+        "date": "2023-06",
         "image": "/images/certs/intro_to_cyber_security.png",
         "verify_link": "#"
     },
@@ -43,7 +43,7 @@
         "id": "CERT_06",
         "title": "Linux",
         "issuer": "Great Learning Academy",
-        "date": "2026-01",
+        "date": "2023-06",
         "image": "/images/certs/Linux_tutorial.png",
         "verify_link": "#"
     }
