@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Muhammad's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CV Specific Print-Friendly & High-Density Styles */
+        .cv-master-wrapper {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+
+        .cv-sidebar {
+            background: #0d0d10;
+            padding: 40px 30px;
+            border-right: 1px solid var(--border);
+        }
+
+        .cv-main { padding: 50px; }
+
+        .cv-section { margin-bottom: 40px; }
+        .cv-section h2 {
+            font-family: monospace;
+            color: var(--accent);
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .cv-item { margin-bottom: 25px; }
+        .cv-item h3 { font-size: 1.1rem; margin: 0 0 5px 0; }
+        .cv-item .meta { 
+            font-family: monospace; 
+            font-size: 0.8rem; 
+            color: var(--text-dim); 
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--border);
+            border-radius: 3px;
+            font-size: 0.7rem;
+            margin-right: 5px;
+        }
+
+        @media print {
+            .cv-nav, .system-footer { display: none; }
+            body { background: white; color: black; }
+            .cv-master-wrapper { border: none; margin: 0; width: 100%; }
+        }
+
+        .active-link { color: var(--accent) !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="brand"><a href="/" style="text-decoration:none; color:inherit;">MUHAMMAD</a><span class="cursor">'S</span> PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="/about/">/about</a>
+            <a href="/projects">/projects</a>
+            <a href="/certs/">/certs</a>
+        </div>
+    </nav>
+
+    <div class="cv-master-wrapper">
+        <aside class="cv-sidebar" id="cv-sidebar-js">
+            <div class="profile-section">
+                <h1 id="cv-name">Loading...</h1>
+                <p id="cv-title" class="label" style="margin-top:10px"></p>
+            </div>
+            <div id="cv-contact-js"></div>
+            <div id="cv-skills-js"></div>
+        </aside>
+
+        <main class="cv-main">
+            <section class="cv-section">
+                <h2>01_SUMMARY</h2>
+                <p id="cv-bio">Initializing data streams...</p>
+            </section>
+
+            <section class="cv-section" id="cv-experience-js">
+                <h2>02_EXPERIENCE_LOG</h2>
+                </section>
+
+            <section class="cv-section" id="cv-projects-js">
+                <h2>03_TECHNICAL_PROJECTS</h2>
+                </section>
+
+            <section class="cv-section" id="cv-certs-js">
+                <h2>04_VERIFIED_CREDENTIALS</h2>
+                </section>
+        </main>
+    </div>
+
+    <script src="/script/cv-engine.js"></script>
+</body>
+</html>
