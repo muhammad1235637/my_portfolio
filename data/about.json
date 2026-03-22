@@ -1,0 +1,35 @@
+{
+    "identity": {
+        "name": "Muhammad",
+        "title": "Full-Stack Developer & Security Researcher",
+        "bio": "A self-taught engineer focused on building secure, high-performance web applications and virtualization layers. Experienced in infrastructure hardening, CVE scanning, and full-stack deployment.",
+        "location": "Al Jubail, Saudi Arabia",
+        "email": "admin@bitcyberbox.com"
+    },
+    "skills": [
+        { "category": "CORE STACK", "items": ["Python", "PHP", "HTML5/CSS3", "JavaScript", "SQL"] },
+        { "category": "INFRASTRUCTURE", "items": ["KVM/QEMU", "Libvirt", "Linux Server Admin", "Xeon Hardware"] },
+        { "category": "SECURITY", "items": ["Penetration Testing", "DNS Spoofing", "Network Hardening"] }
+    ],
+    "experience": [
+        {
+            "role": "Lead Administrator",
+            "org": "bitcyberbox.com",
+            "period": "2025 - PRESENT",
+            "details": [
+                "Architected a secure IT training platform from the ground up.",
+                "Implemented custom PHP/MySQL backend for user certification.",
+                "Managed on-premise server security and network optimization."
+            ]
+        },
+        {
+            "role": "Systems Architect",
+            "org": "Independent Projects",
+            "period": "2026.01 - 2026.02",
+            "details": [
+                "Developed Python-based dashboards for managing server-grade Xeon hardware.",
+                "Configured complex virtualized environments using KVM and Libvirt."
+            ]
+        }
+    ]
+}
