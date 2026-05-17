@@ -11,12 +11,12 @@
     },
     "skills": [
         {
-            "category": "Development",
-            "items": "Python, JavaScript, PHP, HTML/CSS, Shell Scripting"
+            "category": "Desktop & Web Development",
+            "items": "Python, JavaScript, PHP, HTML/CSS (built the bitcyberbox platform )"
         },
         {
-            "category": "Infrastructure",
-            "items": "KVM, QEMU, Libvirt, Linux Server Management, Web Application management, repository management."
+            "category": "Linux Server Management",
+            "items": "Linux Server Management, repository management. ( managing and maintaining the bitcyberbox server till today )"
         },
     ],
     "experience": [
@@ -28,7 +28,7 @@
         {
             "time": "[2026.01 - 2026.02]",
             "title": "Virtualization Enthusiast",
-            "description": "Developed custom Python-based tools for managing hardware and KVM environments."
+            "description": "Developed custom Python-based tools for managing hardware and KVM environments with QEMU and Libvirt."
         }
     ]
 }
