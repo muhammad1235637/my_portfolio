@@ -5,7 +5,9 @@
         "stats": [
             { "val": "5+", "key": "Languages" },
             { "val": "08/5", "key": "Uptime" }
-        ]
+        ],
+        "email": "admin@bitcyberbox.com",
+        "location": "remote"
     },
     "skills": [
         {
