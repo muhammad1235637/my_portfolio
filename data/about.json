@@ -1,7 +1,7 @@
 {
     "identity": {
-        "title": "Full-Stack Developer <br> & Cybersecurity Enthusiast",
-        "bio": "A self-taught engineer focused on the intersection of **Web Development**, **Cybersecurity** and **Fundamental Programming**. built many web apps and systems including the bitcyberbox web app and mailing system. Looking a myself as a startup founder in recent years if god wills.",
+        "title": "Full-Stack Developer <br> & Cybersecurity Educator & Information Security Researcher",
+        "bio": "A self-taught engineer focused on the intersection of **Web Development**, **Cybersecurity** and **Fundamental Programming**. built 2 web apps and systems including the bitcyberbox web app and mailing system to handle up to 1K Users.",
         "stats": [
             { "val": "5+", "key": "Languages" },
             { "val": "08/5", "key": "Uptime" }
